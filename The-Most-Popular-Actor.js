@@ -1,5 +1,5 @@
 function mostPopularActor(actors) {
-}
+} 
 
 var americanActors = [
   { name: "Tom Hanks", popularityScore: 87 },
