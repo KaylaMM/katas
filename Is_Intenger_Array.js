@@ -23,7 +23,7 @@
 //       return arr.every(x=> Number(x) === x && x % 1 === 0 )
 //   };
 
-
+//Final Answer
 function isIntArray(arr) {
     if (!arr){
       return false
