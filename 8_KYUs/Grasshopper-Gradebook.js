@@ -14,6 +14,7 @@ function getGrade (s1, s2, s3) {
     };
 
     //CHAINED TURNARY
+    //Final Submission for Code Wars
     function getGrade (s1, s2, s3) {
         let gradeMean = (s1 + s2 + s3)/3
         return gradeMean >=90 ? 'A'
