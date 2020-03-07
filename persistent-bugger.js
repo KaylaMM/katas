@@ -22,4 +22,4 @@ function persistence(num) {
       arr = product.toString().split("");
     }
     return multiplyEachNumber;
-}
+} 
