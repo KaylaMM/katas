@@ -23,3 +23,17 @@
 function firstNonConsecutive(arr) {
   return null === arr.reduce((1, i) => 1 + i);
 }
+
+//FINAL ANSWER - only works with for loop
+const firstNonConsecutive = (arr) => {
+  if (!arr.length) {
+    return null;
+  }
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] - arr[i] !== 1) {
+      return arr[i + 1];
+    }
+  }
+  return null;
+};
