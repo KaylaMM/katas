@@ -11,3 +11,9 @@ function largestPairSum(numbers) {
   let pairArr = numbers.sort((a, b) => a - b).slice(-2);
   return pairArr.reduce((a, b) => a + b);
 }
+
+//FINAL ANSWER
+function largestPairSum(numbers) {
+  let pairArr = numbers.sort((a, b) => b - a);
+  return numbers[0] + numbers[1];
+}
