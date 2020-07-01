@@ -33,10 +33,12 @@
 // "st re et"    --> 6
 // "ca bba g  e" --> 14
 
-function scrabbleScore(str){
-let splitStr = str.toUpperCase().split('');
-const mapArr = splitStr.map(x => x * 2);
-splitStr.map(console.log()
-console.log("heyyyyy", $dict['A'])
-  // ...
+function scrabbleScore(str) {
+  if (!str) {
+    return 0;
+  }
+  let splitStr = str.toUpperCase().split("");
+  const mapArr = splitStr.map((letter) => $dict[letter] || 0);
+  const reducer = mapArr.reduce((a, b) => a + b);
+  return reducer;
 }
