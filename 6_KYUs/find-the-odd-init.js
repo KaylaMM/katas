@@ -3,8 +3,12 @@
 // There will always be only one integer that appears an odd number of times.
 
 function findOdd(A) {
-  let odds = A.filter(function (x) {
-    return x % 2 === 1;
+  const obj = {};
+  A.forEach(function (el) {
+    obj[el] ? obj[el]++ : (obj[el] = 1);
   });
-  console.log(odds);
+
+  for (prop in obj) {
+    if (obj[prop] % 2 !== 0) return Number(prop);
+  }
 }
