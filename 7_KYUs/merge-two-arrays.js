@@ -11,12 +11,12 @@
 // The arrays may be of different lengths, with at least one character/digit.
 // One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
 
-function mergeArrays(a, b) {
-  const arr = [];
-  let theLengths = Math.max(a.length, b.length);
-  for (let i = 0; i < theLengths; i++) {
-    arr.push(a[i]);
-    arr.push(b[i]);
+function arrayDiff(a, b) {
+  if (a.length > 0 && b.length > 0) {
+    return (diff = a.filter((num) => !b.includes(num)));
+  } else if (b.length == 0) {
+    return a;
+  } else {
+    return a;
   }
-  return arr;
 }
