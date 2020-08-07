@@ -5,3 +5,9 @@
 // solve( [[10,-15],[-1,-3]] ) = 45, given by (-15) * (-3)
 // solve( [[1,-1],[2,3],[10,-100]] ) = 300, given by (-1) * 3 * (-100)
 // More examples in test cases. Good luck!
+
+function solve(arr) {
+  return arr.map(function (row) {
+    return Math.max.apply(Math, row);
+  });
+}
