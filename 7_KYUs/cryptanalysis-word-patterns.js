@@ -5,13 +5,17 @@
 // As an example, the word "hello" would become "0.1.2.2.3". For this task case-sensitivity is ignored, so "hello", "helLo" and "heLlo" will all return the same word pattern.
 
 // Your task is to return the word pattern for a given word. All words provided will be non-empty strings of alphabetic characters only, i.e. matching the regex "[a-zA-Z]+".
-const wordPattern = word =>{
-  let x = 0
-  const wordArr = word.split(‘’)
-  const mapped = wordArr.map((letter,i) => {
-    if(letter === wordArr[i-1]){x++}
-    console.log(letter,i,x)
-    return `${i-x}.`
-  }).join(‘’)
-  return mapped
-}
+const wordPattern = (word) => {
+  let x = 0;
+  const wordArr = word.split("");
+  const mapped = wordArr
+    .map((letter, i) => {
+      if (letter === wordArr[i - 1]) {
+        x++;
+      }
+      console.log(letter, i, x);
+      return `${i - x}.`;
+    })
+    .join("");
+  return mapped;
+};

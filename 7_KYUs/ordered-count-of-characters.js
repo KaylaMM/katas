@@ -21,3 +21,4 @@ function orderedCount(text) {
 // if yes +1 to child array in parent
 // retutn parent array
 //==>use two maps?
+//console.log
