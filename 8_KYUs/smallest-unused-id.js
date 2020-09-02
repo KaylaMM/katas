@@ -7,7 +7,15 @@
 // Note: The given array of used IDs may be unsorted. For test reasons there may be duplicate IDs, but you don't have to find or remove them!
 
 // Go on and code some pure awesomeness!
-
- //check if index b is index a + 1
-  //if yes, check next index
-  //if not, return index a + 1
+function nextId(ids) {
+  const sorted = ids.sort((a, b) => a - b);
+  if (sorted[0] !== 0) {
+    return 0;
+  }
+  for (let i = 0; i < ids.length; i++) {
+    if (ids[i + 1] - ids[i] > 1) {
+      return ids[i] + 1;
+    }
+  }
+  return ids[ids.length - 1] + 1;
+}
