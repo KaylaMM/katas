@@ -13,13 +13,13 @@
 
 // The strings will contain lowercase letters only. More examples in the test cases.
 
-function doubles(s) {
+const doubles = (s) => {
   let arr = s.split("");
-  for (i = 1; i < arr.length; i++) {
+  for (i = 1; i <= arr.length; i++) {
     if (arr[i - 1] === arr[i]) {
-      arr.splice(i - 1, 1);
-      i = 1;
+      arr.splice(i - 1, 2);
+      i = 0;
     }
   }
-  return arr.join;
-}
+  return arr.join("");
+};
