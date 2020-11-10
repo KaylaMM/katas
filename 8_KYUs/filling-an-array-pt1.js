@@ -5,3 +5,17 @@
 // For example, the following code will result in an array containing the numbers 0 to 4:
 
 // arr(5) // => [0,1,2,3,4]
+
+//SHORTHAND:
+
+const arr = (N) => Array.apply(null, { length: N }).map(Number.call, Number);
+
+//BEST PRACTICE:
+
+function arr(n) {
+  var newArr = [];
+  for (var i = 0; i < n; i++) {
+    newArr.push(i);
+  }
+  return newArr;
+}
