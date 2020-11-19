@@ -12,3 +12,35 @@
 // warnTheSheep(["sheep", "sheep", "sheep", "wolf", "sheep"]) === "Oi! Sheep number 1! You are about to be eaten by a wolf!"
 
 // warnTheSheep(["sheep", "sheep", "wolf"]) === "Pls go away and stop eating my sheep"
+
+function warnTheSheep(queue) {
+  let sheep = queue.reverse();
+  let message;
+  for (i = 0; i < sheep.length; i++) {
+    let possibleWolf = sheep[i + 1];
+    if (possibleWolf === "wolf") {
+      return `Oi! Sheep number ${i + 1}! You are about to be eaten by a wolf!`;
+    } else {
+      message = "Pls go away and stop eating my sheep";
+    }
+  }
+  return message;
+}
+
+const warnTheSheep = (queue) => {
+  let sheep = queue.reverse();
+  for (i = 0; i < sheep.length; i++) {
+    let possibleWolf = sheep[i + 1];
+    if (possibleWolf === "wolf") {
+      return `Oi! Sheep number ${i + 1}! You are about to be eaten by a wolf!`;
+    }
+  }
+  return "Pls go away and stop eating my sheep";
+};
+
+function warnTheSheep(queue) {
+  const position = queue.reverse().indexOf("wolf");
+  return position === 0
+    ? "Pls go away and stop eating my sheep"
+    : `Oi! Sheep number ${position}! You are about to be eaten by a wolf!`;
+}
