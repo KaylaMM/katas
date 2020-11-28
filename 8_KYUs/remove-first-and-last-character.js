@@ -6,3 +6,6 @@ function removeChar(str) {
   arr.pop();
   return arr.join("");
 }
+
+//shorthand answer
+const removeChar = (str) => str.slice(1, -1);
