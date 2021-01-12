@@ -11,11 +11,20 @@
 
 // If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell).
 
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// THINGS TO TRY:
+//sort array
+//create a counter
+//check if number is positive or negative ot always get a positive answer
+
 function sumOfDifferences(arr) {
-  //   return (arr.length >= 1) ? (arr[0] - arr[1]) + (arr[1] - arr[2]) : 0
+  if (arr.length <= 1) {
+    return 0;
+  }
 
   let newArr = arr.map((x, i) => arr[i] - arr[i + 1]);
-  console.log(newArr);
   let mapSum = newArr.map((x, i) => x + newArr[i + 1]);
-  return mapSum;
+
+  return Math.abs(mapSum[0]);
 }
