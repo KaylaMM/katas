@@ -10,3 +10,15 @@
 // checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]) → 7
 // checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]) → 16
 // checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]) → 0
+
+function checkExam(array1, array2) {
+  let counter = 0;
+  let i = 0;
+  for (i = 0; array1.length === array2.length; i++) {
+    if (array1[i] === array2[i]) {
+      return counter + 4;
+    } else {
+      return counter - 1;
+    }
+  }
+}
