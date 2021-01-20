@@ -17,6 +17,8 @@ function checkExam(array1, array2) {
   for (i = 0; array1.length === array2.length; i++) {
     if (array1[i] === array2[i]) {
       return counter + 4;
+    } else if (counter <= 0) {
+      return 0;
     } else {
       return counter - 1;
     }
