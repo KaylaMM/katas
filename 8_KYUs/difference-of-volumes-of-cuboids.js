@@ -6,3 +6,5 @@
 
 // If you can, try writing it in one line of code.
 
+const findDifference = (a, b) =>
+  Math.abs(a.reduce((a, v) => a * v) - b.reduce((a, v) => a * v));
