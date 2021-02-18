@@ -13,20 +13,23 @@
 // Make sure you cover the cases where certain words do not show up with correct capitalization. For example, the input "pOLitiCIaN" should still return "Your tax dollars".
 
 function getDrinkByProfession(param) {
-  let table = [
-    { input: "Jabroni", output: "Patron Tequila" },
-    { input: "School Counselor", output: "Anything with Alcohol" },
-    { input: "Programmer", output: "Hipster Craft Beer" },
-    { input: "Bike Gang Member", output: "Moonshine" },
-    { input: "Politician", output: "Your tax dollars" },
-    { input: "Rapper", output: "Cristal" },
-  ];
+  param = param.toLowerCase();
 
-  let caps = param.toUpperCase();
-
-  return table.map((caps, input) => {
-    return table.output ? table.input === caps : "Beer";
-  });
-
-  return map;
+  switch (param) {
+    case "jabroni":
+      return "Patron Tequila";
+    case "school counselor":
+      return "Anything with Alcohol";
+    case "programmer":
+      return "Hipster Craft Beer";
+    case "bike gang member":
+      return "Moonshine";
+    case "politician":
+      return "Your tax dollars";
+    case "rapper":
+      return "Cristal";
+    default:
+      return "Beer";
+  }
+  return;
 }
