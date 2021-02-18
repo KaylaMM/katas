@@ -31,5 +31,4 @@ function getDrinkByProfession(param) {
     default:
       return "Beer";
   }
-  return;
 }
