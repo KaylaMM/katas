@@ -1,5 +1,5 @@
 // Implement a function which multiplies two numbers.
 
-const multiplyNum = (a, b) => {
+function multiply(a, b) {
   return a * b;
-};
+}
