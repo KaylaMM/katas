@@ -5,13 +5,6 @@
 // If the input array is empty consider it as: [0] (array with a zero).
 
 function oddOrEven(array) {
-  let sum = [].reduce(function (previousValue, currentValue) {
-    return Number(previousValue) + Number(currentValue);
-  }, 0);
-  console.log(sum);
-  if (sum % 2 === 0) {
-    return "even";
-  } else {
-    return "odd";
-  }
+  if (!array.length) return "even";
+  return array.reduce((a, b) => a + b) % 2 === 0 ? "even" : "odd";
 }
