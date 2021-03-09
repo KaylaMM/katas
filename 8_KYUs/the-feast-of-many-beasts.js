@@ -6,14 +6,22 @@
 
 function feast(beast, dish) {
   let splitBeast = beast.split("");
-  console.log(splitBeast);
 
   let splitDish = dish.split("");
-  console.log(splitDish);
 
-  if (splitBeast[0] === splitDish[0]) {
+  if (
+    splitBeast[0] === splitDish[0] &&
+    splitBeast[splitBeast.length - 1] === splitDish[splitDish.length - 1]
+  ) {
     return true;
   } else {
-    false;
+    return false;
   }
+}
+
+//SHORT HAND ANSWER
+function feast(beast, dish) {
+  return (
+    beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+  );
 }
