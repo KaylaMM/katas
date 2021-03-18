@@ -7,3 +7,16 @@
 // Examples
 // "day"    ==>  "dya"
 // "apple"  ==>  "pplae"
+
+function moveVowel(input) {
+  let inputArr = input.split("");
+  return inputArr
+    .map((character) => {
+      if (/[aeiouyAEIOUY]/.test(character)) {
+        character = "";
+      } else {
+        return character;
+      }
+    })
+    .join("");
+}
