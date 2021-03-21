@@ -9,14 +9,15 @@
 // "apple"  ==>  "pplae"
 
 function moveVowel(input) {
-  let inputArr = input.split("");
-  return inputArr
-    .map((character) => {
-      if (/[aeiouyAEIOUY]/.test(character)) {
-        character = "";
-      } else {
-        return character;
-      }
-    })
-    .join("");
+  const allVowels = ["a", "e", "i", "o", "u"];
+  let vowelsArr = [];
+  const inputArr = input.split("");
+  const consonantsArr = inputArr.filter((letter) => {
+    if (allVowels.includes(letter)) {
+      vowelsArr.push(letter);
+      return false;
+    }
+    return true;
+  });
+  return consonantsArr.concat(vowelsArr).join("");
 }
