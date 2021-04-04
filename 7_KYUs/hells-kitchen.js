@@ -7,10 +7,13 @@
 // Obviously the words should be Caps, Every word should end with '!!!!', Any letter 'a' or 'A' should become '@', Any other vowel should become '*'.
 
 function gordon(a) {
-  return (
-    a
-      .toUpperCase()
-      .replace(/[a]/gi, "@")
-      .replace(/[aeiou]/gi, "*") + "!!!!"
-  );
+  const adjustedStr = a
+    .toUpperCase()
+    .replace(/[a]/gi, "@")
+    .replace(/[aeiou]/gi, "*");
+
+  return adjustedStr
+    .split(" ")
+    .map((e) => e + "!!!!")
+    .join(" ");
 }
