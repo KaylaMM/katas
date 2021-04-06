@@ -11,6 +11,8 @@
 // The arrays may be of different lengths, with at least one character/digit.
 // One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
 
+//ORIGINAL ANSWER
+
 function mergeArrays(a, b) {
   const arr = [];
   let theLengths = Math.max(a.length, b.length);
@@ -19,4 +21,18 @@ function mergeArrays(a, b) {
     arr.push(b[i]);
   }
   return arr;
+}
+
+//FINAL ANSWER
+
+function mergeArrays(a, b) {
+  const maxLength = Math.max(a.length, b.length);
+  let result = [];
+
+  for (let i = 0; i < maxLength; i++) {
+    result.push(a[i]);
+    result.push(b[i]);
+  }
+
+  return result.filter((value) => value !== undefined);
 }
