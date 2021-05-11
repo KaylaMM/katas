@@ -6,3 +6,14 @@
 // More examples can be found in the test cases.
 
 // Good luck!
+
+// Long Solution
+
+const solve = (arr) =>
+  arr.reduce((accumulator, int, index, array) => {
+    if (!array.includes(int, index + 1)) return [...accumulator, int];
+    return accumulator;
+  }, []);
+
+// Short Solution
+const solve = (array) => [...new Set([...array].reverse())].reverse();
