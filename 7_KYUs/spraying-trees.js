@@ -13,3 +13,17 @@
 // For example:
 
 // task('Monday', 15, 2) -> 'It is Monday today, James, you have to work, you must spray 15 trees and you need 30 dollars to buy liquid'
+
+function task(w, n, c) {
+  const shifts = {
+    Monday: "James",
+    Tuesday: "John",
+    Wednesday: "Robert",
+    Thursday: "Michael",
+    Friday: "William",
+  };
+
+  const x = n * c;
+
+  return `It is ${w} today, ${shifts[w]}, you have to work, you must spray ${n} trees and you need ${x} dollars to buy liquid`;
+}
