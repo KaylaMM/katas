@@ -16,3 +16,15 @@ function vowelIndices(word) {
   const vowel = /[aeiouyAEIOUY]/gi;
   return word.split("").indexOf(vowel);
 }
+
+function vowelIndices(word) {
+  const vowels = /[aeiouyAEIOUY]/gi;
+  for (let i = 0; i < vowels.length; i++) {
+    if (vowels[i] === word.charAt(0)) {
+      return word + "way";
+    } else {
+      return word.substr(0, word.indexOf(vowels[i]));
+    }
+  }
+  return word;
+}
