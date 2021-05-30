@@ -12,19 +12,12 @@
 // This is indexed from [1..n] (not zero indexed!)
 
 function vowelIndices(word) {
-  let indexArr = [];
-  const vowel = /[aeiouyAEIOUY]/gi;
-  return word.split("").indexOf(vowel);
-}
-
-function vowelIndices(word) {
-  const vowels = /[aeiouyAEIOUY]/gi;
-  for (let i = 0; i < vowels.length; i++) {
-    if (vowels[i] === word.charAt(0)) {
-      return word + "way";
-    } else {
-      return word.substr(0, word.indexOf(vowels[i]));
+  let arr = [];
+  let a = word.split("");
+  for (let i = 0; i < word.length; i++) {
+    if (/[aeuoiy]/gi.test(a[i])) {
+      arr.push(i + 1);
     }
   }
-  return word;
+  return arr;
 }
