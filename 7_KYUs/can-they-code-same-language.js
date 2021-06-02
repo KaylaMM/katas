@@ -12,7 +12,15 @@
 // your function should return true.
 
 function isSameLanguage(list) {
-  return list.map((obj, i) => {
-    return true ? obj.name[i] === obj.name[i + 1] : false;
-  });
+  for (var i = 1; i < list.length; i++) {
+    if (list[i].language !== list[0].language) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// TOP ANSWER
+function isSameLanguage(list) {
+  return list.every((e) => e.language === list[0].language);
 }
