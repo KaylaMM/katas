@@ -5,3 +5,14 @@
 // For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
 
 // All inputs will be integers. Please return an integer. Round down.
+
+function dutyFree(normPrice, discount, hol) {
+  const newPrice = normPrice - normPrice * (discount / 100);
+  const savings = normPrice - newPrice;
+  return Math.floor(hol / savings);
+}
+
+// TOP ANSWER
+function dutyFree(normPrice, discount, hol) {
+  return Math.floor((hol / normPrice / discount) * 100);
+}
