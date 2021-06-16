@@ -15,11 +15,11 @@
 // 6. 3 / 2 = 1 remainder 1
 
 const divisions = (n, divisor) => {
-  let count = 0;
-  if (n / divisor > 0) {
-    return n / divisor;
-    count++;
-  } else {
-    return count;
+  if (n / divisor < 1) return 0;
+  let count = 1;
+
+  for (let result = n / divisor; result > divisor; count++) {
+    result = result / divisor;
   }
+  return count;
 };
