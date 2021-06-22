@@ -13,15 +13,17 @@
 
 // addArrays(["a"],["b"]) // => ["ab"]
 
+//My Answer
 function addArrays(array1, array2) {
   if (array1.length !== array2.length) {
-    return "Error";
-  } else if (
-    array1.every((i) => typeof i === "string") &&
-    array2.every((i) => typeof i === "string")
-  ) {
-    return array1.concat(array2);
+    return new Error();
   } else {
     return array1.map((num, idx) => num + array2[idx]);
   }
+}
+
+//Top Answer
+function addArrays(array1, array2) {
+  if (array1.length != array2.length) throw new Error();
+  return array1.map((a, i) => array1[i] + array2[i]);
 }
