@@ -8,6 +8,14 @@
 
 // Patrick Feeney => P.F
 
+//MY ANSWER
 function abbrevName(name) {
-  return name.replace(/[^A-Z0-9]/g, "").split("");
+  const initials = name.match(/\b(\w)/g);
+  return initials[0].toUpperCase() + "." + initials[1].toUpperCase();
+}
+
+//TOP ANSWER
+function abbrevName(name) {
+  var nameArray = name.split(" ");
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
 }
