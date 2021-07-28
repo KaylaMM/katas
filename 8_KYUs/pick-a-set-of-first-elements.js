@@ -9,6 +9,7 @@
 // first(arr, 3) //=> ['a', 'b', 'c'];
 // first(arr, 0) //=> [];
 
-function first(arr, n) {
-  return arr.map(n => );
-}
+const first = (arr, n) => {
+  if (n === 0) return [];
+  return [...arr].splice(0, n || 1);
+};
