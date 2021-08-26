@@ -3,5 +3,27 @@
 // All inputs will be valid.
 
 function switcher(x) {
-  return x.map((str) => str.match(/[a-z]/i));
+  let result = "";
+  for (let char of x) {
+    if (Number(char) <= 26) {
+      result += String.fromCharCode(123 - char);
+    } else {
+      if (char === "27") result += "!";
+      else if (char === "28") result += "?";
+      else result += " ";
+    }
+  }
+  return result;
+}
+
+//Favorite Answer
+function switcher(x) {
+  return x
+    .map((a) => {
+      if (a == 27) return "!";
+      if (a == 28) return "?";
+      if (a == 29) return " ";
+      return String.fromCharCode(97 + 26 - parseInt(a));
+    })
+    .join("");
 }
