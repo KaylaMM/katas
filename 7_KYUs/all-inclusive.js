@@ -16,6 +16,17 @@
 // we will consider that there are no rotations of strng == ""
 // and for any array arr: contain_all_rots("", arr) --> true
 
+//My answer
 function containAllRots(strng, arr) {
   return true ? strng.includes(arr) || strng.includes("") : false;
+}
+
+//Top Answer
+function containAllRots(str, arr) {
+  for (var i = 0; i < str.length; i++) {
+    if (arr.indexOf(str.slice(i) + str.slice(0, i)) === -1) {
+      return false;
+    }
+  }
+  return true;
 }
