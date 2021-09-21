@@ -6,5 +6,10 @@
 
 
 function billboard(name, price = 30) {
-  return name.split("").length * price;
+  let cost = 0;
+  const add = () => {
+    cost += price;
+  };
+  name.split("").forEach(add);
+  return cost;
 } 
