@@ -1,12 +1,9 @@
 function getSecondLargest(nums) {
-  const max = nums.sort(function (a, b) {
+  const sortedArray = nums.sort((a, b) => {
     return b - a;
   });
 
-  const removeMax = max.shift();
+  const max = sortedArray[0];
 
-  console.log(max, "_+_+_+_");
-  //     const max =  nums.reduce((a, b) => {
-  //     return Math.max(a, b);
-  // }, 0);
+  return sortedArray.find((num) => num < max);
 }
