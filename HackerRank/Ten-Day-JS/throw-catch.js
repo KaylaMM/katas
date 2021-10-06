@@ -1,27 +1,9 @@
 function isPositive(a) {
-  if (a > 0) {
-    return "YES";
-  }
-
-  const throwZero = () => {
-    a === 0;
-    throw "Zero Error";
-  };
-
-  const throwNegative = () => {
-    a < 0;
-    throw "Negative Error";
-  };
-
   try {
-    throwZero();
+    if (a > 0) return "YES";
+    if (a === 0) throw new Error("Zero Error");
+    if (a < 0) throw new Error("Negative Error");
   } catch (e) {
-    console.log(e);
-  }
-
-  try {
-    throwNegative();
-  } catch (e) {
-    console.log(e);
+    return e.message;
   }
 }
