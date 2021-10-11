@@ -1,10 +1,10 @@
-function Rectangle(a, b) {
-  let rectangle = {
-    length: a,
-    width: b,
-    perimeter: a * 2 + b * 2,
-    area: a * b,
-  };
-
-  return rectangle;
+function getCount(objects) {
+  let count = 0;
+  let o;
+  for (let i = 0; i < objects.length; i++) {
+    if (objects[i].x === objects[i].y) {
+      count++;
+    }
+  }
+  return count;
 }
