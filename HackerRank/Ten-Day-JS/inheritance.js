@@ -1,15 +1,21 @@
+
 /*
  *  Write code that adds an 'area' method to the Rectangle class' prototype
  */
 
-function getArea() {
-  return this.h * this.w;
-}
-
+  Rectangle.prototype.area = function() {
+      return this.w * (this.h || this.w)
+  }
+      
 /*
  * Create a Square class that inherits from Rectangle and implement its class constructor
  */
 
 class Square extends Rectangle {
-  getArea() {}
+    constructor(w,h) {
+        super(w,h);
+        this.w = w;
+        this.h = h;
+    }
+
 }
