@@ -7,13 +7,13 @@
 // [4, 10, 10, 9]  =>  [10, 9]
 // [1, 1, 1]  =>  [1]
 // []  =>  []
-
 function twoHighest(arr) {
-  if (arr.length === 0) {
-    return [];
-  } else {
-    let max = Math.max.apply(null, arr);
-    arr.splice(arr.indexOf(max), 1);
-    return Math.max.apply(null, arr);
+  if (!arr.length) return [];
+  const max1 = Math.max(...arr);
+  let max2;
+  const filteredArr = arr.filter((el) => el !== max1);
+  if (filteredArr.length) {
+    max2 = Math.max(...filteredArr);
   }
+  return max2 ? [max1, max2] : [max1];
 }
